@@ -172,6 +172,12 @@ jobs:
         run: |
           cmake --build "build/ci" --config ${{ env.CMAKE_BUILD_TYPE }} --target StreamFX
 
+      # List directory contents (for debugging)
+      - name: "List Directory Contents"
+        shell: bash
+        run: |
+          ls -la build/ci
+
       - uses: actions/upload-artifact@v3
         with:
           name: "StreamFX-${{ matrix.name }}-${{ env.CMAKE_BUILD_TYPE }}.zip"
