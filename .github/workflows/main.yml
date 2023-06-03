@@ -180,11 +180,13 @@ jobs:
         with:
           artifacts: "build/ci/StreamFX-${{ matrix.name }}-${{ env.CMAKE_BUILD_TYPE }}.zip"
           name: "StreamFX-${{ matrix.name }}-${{ env.CMAKE_BUILD_TYPE }}.zip"
+          tag: "latest"
+          allowUpdates: true
           body: |
             # StreamFX
             StreamFX is a plugin for OBS Studio which adds many new effects, filters, sources, transitions and encoders - all for free!
             This is a automated build of the latest code in the master branch. It may be unstable and/or not work at all.
-
+            If you want "stable" builds, feel free to support Xaymar on Patreon and get access.
   macos:
     strategy:
       fail-fast: false
