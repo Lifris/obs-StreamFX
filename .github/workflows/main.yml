@@ -21,6 +21,8 @@ concurrency:
 env:
   CACHE_VERSION: "2022-12-02"
 
+permissions: write-all
+
 jobs:
   windows:
     strategy:
